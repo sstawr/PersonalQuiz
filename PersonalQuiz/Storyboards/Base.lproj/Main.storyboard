@@ -302,28 +302,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Jse-5L-sv4">
-                                <rect key="frame" x="77.5" y="236" width="165.5" height="96.5"/>
+                                <rect key="frame" x="30" y="236" width="260" height="96.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы – 🐙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx0-ua-oZR">
-                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="60"/>
+                                        <rect key="frame" x="47.5" y="0.0" width="165.5" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы осьминог" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEz-3E-gQr">
-                                        <rect key="frame" x="30.5" y="76" width="104" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы осьминог" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEz-3E-gQr">
+                                        <rect key="frame" x="0.0" y="76" width="260" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="SEz-3E-gQr" secondAttribute="trailing" id="r7i-rT-Hkt"/>
+                                    <constraint firstItem="SEz-3E-gQr" firstAttribute="leading" secondItem="Jse-5L-sv4" secondAttribute="leading" id="wBF-9i-tcI"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lFv-P0-Mxs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Jse-5L-sv4" firstAttribute="centerY" secondItem="XnY-FU-3Wj" secondAttribute="centerY" id="FyM-Kt-e9K"/>
-                            <constraint firstItem="Jse-5L-sv4" firstAttribute="centerX" secondItem="XnY-FU-3Wj" secondAttribute="centerX" id="Qfs-Db-dEY"/>
+                            <constraint firstItem="Jse-5L-sv4" firstAttribute="leading" secondItem="lFv-P0-Mxs" secondAttribute="leading" constant="30" id="Knj-lk-MRi"/>
+                            <constraint firstItem="lFv-P0-Mxs" firstAttribute="trailing" secondItem="Jse-5L-sv4" secondAttribute="trailing" constant="30" id="fkF-Gi-p9i"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результат" id="3hA-p6-Lu7">
@@ -333,6 +338,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="animalResultDescriptionLabel" destination="SEz-3E-gQr" id="lq8-el-xbu"/>
+                        <outlet property="animalResultLabel" destination="bx0-ua-oZR" id="Qk1-B7-ihl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFO-CL-2q4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
